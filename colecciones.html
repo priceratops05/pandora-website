@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora</title>
+    <link rel="icon" href="./imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/colecciones.css">
+    <script src="https://kit.fontawesome.com/4a30f6fcf9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/scrollTop.js" defer></script>
+    <script src="./js/translations.js" defer></script>
+    <script src="./js/colecciones.js" defer></script>
+</head>
+
+<body id="top">
+    <header>
+        <nav class="mobile-nav">
+            <div id="menu-nav">
+                <i class="fas fa-bars"></i>
+                <ul class="dropdown">
+                    <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                    <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                    <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                    <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    <li><a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a></li>
+                    <li><a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a></li>
+                </ul>
+            </div>
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div id="language-container">
+                <div class="language-img">
+                    <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                </div>
+                <div class="language-img ">
+                    <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                </div>
+            </div>
+        </nav>
+        <nav class="desktop-nav">
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div class="option-nav">
+                <div id="linear-nav">
+                    <a href="#" class="productos translate" data-translate="products">PRODUCTOS<i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                        <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                        <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                        <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    </ul>
+                </div>
+                <div class="pages">
+                    <a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a>
+                    <a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                    </div>
+                    <div class="language-img ">
+                        <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="sct-banner">
+            <div id="img-banner">
+                <img src="./imagenes/colecciones/starWarsBanner.jpg" alt="">
+            </div>
+            <h1 class="translate" data-translate="collections">COLECCIONES</h1>
+        </section>
+        <section id="filter">
+            <p class="translate" data-translate="filters">Filtros</p>
+            <hr>
+            <div id=filter-type>
+                <div id="type">
+                    <p class="translate" data-translate="type">Tipo</p>
+                    <div id="options-type">
+                        <div class="option">
+                            <input type="radio" id="all" name="collection" onchange="filter()" hidden checked>
+                            <label for="all" class="label-radios">
+                                <span class="translate" data-translate="all">Todos</span>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="harry" name="collection" onchange="filter()" hidden>
+                            <label for="harry" class="label-radios">
+                                <img src="./imagenes/colecciones/radioHarry2.jpeg" alt="Charm Harry Potter">
+                                <span>Harry Potter</span>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="disney" name="collection" onchange="filter()" hidden>
+                            <label for="disney" class="label-radios">
+                                <img src="./imagenes/colecciones/radioDisney1.jpeg" alt="Charm Disney">
+                                <span>Disney</span>
+                            </label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="star-wars" name="collection" onchange="filter()" hidden>
+                            <label for="star-wars" id="charm-star" class="label-radios">
+                                <img src="./imagenes/colecciones/radioStarWars.jpeg"alt="Charm Star Wars">
+                                <span>Star Wars</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gallery">
+            <div class="row">
+                <img src="./imagenes/colecciones/colecciones1.png" id="myPhoto1" onclick="photo1()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones7.png" id="myPhoto7" onclick="photo7()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones13.png" id="myPhoto13" onclick="photo13()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones19.png" id="myPhoto19" onclick="photo19()" class="img-gallery disney">
+                <img src="./imagenes/colecciones/colecciones14.png" id="myPhoto14" onclick="photo14()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones2.png" id="myPhoto2" onclick="photo2()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones8.png" id="myPhoto8" onclick="photo8()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones20.png" id="myPhoto20" onclick="photo20()" class="img-gallery disney">
+                <img src="./imagenes/colecciones/colecciones21.png" id="myPhoto21" onclick="photo21()" class="img-gallery disney">
+                <img src="./imagenes/colecciones/colecciones15.png" id="myPhoto15" onclick="photo15()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones3.png" id="myPhoto3" onclick="photo3()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones9.png" id="myPhoto9" onclick="photo9()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones10.png" id="myPhoto10" onclick="photo10()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones22.png" id="myPhoto22" onclick="photo22()" class="img-gallery disney">
+                <img src="./imagenes/colecciones/colecciones16.png" id="myPhoto16" onclick="photo16()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones4.png" id="myPhoto4" onclick="photo4()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones5.png" id="myPhoto5" onclick="photo5()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones11.png" id="myPhoto11" onclick="photo11()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones23.png" id="myPhoto23" onclick="photo23()" class="img-gallery disney">
+                <img src="./imagenes/colecciones/colecciones17.png" id="myPhoto17" onclick="photo17()" class="img-gallery disney">
+                <img src="./imagenes/colecciones/colecciones18.png" id="myPhoto18" onclick="photo18()" class="img-gallery disney">
+                <img src="./imagenes/colecciones/colecciones6.png" id="myPhoto6" onclick="photo6()" class="img-gallery harry">
+                <img src="./imagenes/colecciones/colecciones12.png" id="myPhoto12" onclick="photo12()" class="img-gallery star-wars">
+                <img src="./imagenes/colecciones/colecciones24.png" id="myPhoto24" onclick="photo24()" class="img-gallery disney">
+            </div>
+        </section>
+        <a id="scrolltop" href="#top" data-scroll>
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div class="copyright">
+                <h2>Priscilla Calderón 2021</h2>
+                <h3 class="translate" data-translate="footer">Examen Cenfotec / Sitio Web Pandora</h3>
+            </div>
+            <div id="footer-actions">
+                <div class="app-button">
+                    <a href="./index.html">App</a>
+                </div>
+                <div class="social">
+                    <div class="social-media animation">
+                        <a href="http://www.facebook.com" target="blank">
+                            <i class="fab fa-facebook" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.twitter.com" target="blank">
+                            <i class="fab fa-twitter-square" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.instagram.com" target="blank">
+                            <i class="fab fa-instagram" style="color:#fff"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="language" onclick="changeLanguageEvent(event)"><img src="./imagenes/spanish.png" alt="Español"></a>
+                    </div>
+                    <div class="language-img">
+                        <a language='english' class="language" onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

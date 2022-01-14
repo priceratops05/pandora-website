@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora</title>
+    <link rel="icon" href="./imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/pandoraMe.css">
+    <script src="https://kit.fontawesome.com/4a30f6fcf9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/scrollTop.js" defer></script>
+    <script src="./js/translations.js" defer></script>
+    <script src="./js/pandoraMe.js" defer></script>
+</head>
+
+<body id="top">
+    <header>
+        <nav class="mobile-nav">
+            <div id="menu-nav">
+                <i class="fas fa-bars"></i>
+                <ul class="dropdown">
+                    <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                    <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                    <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                    <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    <li><a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a></li>
+                    <li><a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a></li>
+                </ul>
+            </div>
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div id="language-container">
+                <div class="language-img">
+                    <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                </div>
+                <div class="language-img ">
+                    <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                </div>
+            </div>
+        </nav>
+        <nav class="desktop-nav">
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div class="option-nav">
+                <div id="linear-nav">
+                    <a href="#" class="productos translate" data-translate="products">PRODUCTOS<i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                        <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                        <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                        <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    </ul>
+                </div>
+                <div class="pages">
+                    <a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a>
+                    <a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                    </div>
+                    <div class="language-img ">
+                        <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="sct-banner">
+            <div id="img-banner">
+                <img src="./imagenes/pandoraMe/pandora-me-banner.jpeg" alt="">
+            </div>
+            <div id="descuentos-title">
+                <h1>PANDORA ME</h1>
+            </div>
+        </section>
+
+        <section id="filter">
+            <p class="translate" data-translate="filters">Filtros</p>
+            <hr>
+            <div id=filter-type>
+                <div id="type">
+                    <p class="translate" data-translate="type">Tipo</p>
+                    <div id="options-type">
+                        <div class="option">
+                            <input type="checkbox" id="charms" onchange="filter()" hidden checked>
+                            <label for="charms">Charms</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="bracelets" onchange="filter()" hidden checked>
+                            <label for="bracelets" class="translate" data-translate="bracelets">Pulseras</label>
+                        </div>
+                        <div class="option">
+                            <input type="checkbox" id="necklace" onchange="filter()" hidden checked>
+                            <label for="necklace" class="translate" data-translate="necklace">Collares</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gallery">
+            <div class="row">
+
+                <div class="img-container necklace">
+                    <img src="./imagenes/pandoraMe/pandoraMe1.jpeg" id="myPhoto1" onclick="photo1()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe2.jpeg" id="myPhoto2" onclick="photo2()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe3.jpeg" id="myPhoto3" onclick="photo3()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container bracelet">
+                    <img src="./imagenes/pandoraMe/pandoraMe4.jpeg" id="myPhoto4" onclick="photo4()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe5.jpeg" id="myPhoto5" onclick="photo5()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe6.jpeg" id="myPhoto6" onclick="photo6()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe7.jpeg" id="myPhoto7" onclick="photo7()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe8.jpeg" id="myPhoto8" onclick="photo8()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe9.jpeg" id="myPhoto9" onclick="photo9()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe10.jpeg" id="myPhoto10" onclick="photo10()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe11.jpeg" id="myPhoto11" onclick="photo11()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>
+                <div class="img-container charm">
+                    <img src="./imagenes/pandoraMe/pandoraMe12.jpeg" id="myPhoto12" onclick="photo12()" class="img-gallery">
+                    <div class="sale-tag"><span class="translate" data-translate="new">Nuevo</span></div>
+                </div>>
+            </div>
+        </section>
+        <a id="scrolltop" href="#top" data-scroll>
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div class="copyright">
+                <h2>Priscilla Calderón 2021</h2>
+                <h3 class="translate" data-translate="footer">Examen Cenfotec / Sitio Web Pandora</h3>
+            </div>
+            <div id="footer-actions">
+                <div class="app-button">
+                    <a href="./index.html">App</a>
+                </div>
+                <div class="social">
+                    <div class="social-media animation">
+                        <a href="http://www.facebook.com" target="blank">
+                            <i class="fab fa-facebook" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.twitter.com" target="blank">
+                            <i class="fab fa-twitter-square" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.instagram.com" target="blank">
+                            <i class="fab fa-instagram" style="color:#fff"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src="./imagenes/spanish.png" alt="Español"></a>
+                    </div>
+                    <div class="language-img">
+                        <a language='english' class="language" onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

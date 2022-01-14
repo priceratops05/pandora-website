@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora</title>
+    <link rel="icon" sizes="32x32" href="./imagenes/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://kit.fontawesome.com/4a30f6fcf9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/scrollTop.js" defer></script>
+    <script src="./js/translations.js" defer></script>
+    <script src="./js/home.js" defer></script>
+</head>
+
+<body id="top">
+    <header>
+        <nav class="mobile-nav">
+            <div id="menu-nav">
+                <i class="fas fa-bars"></i>
+                <ul class="dropdown">
+                    <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                    <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                    <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                    <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    <li><a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a></li>
+                    <li><a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a></li>
+                </ul>
+            </div>
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div id="language-container">
+                <div class="language-img">
+                    <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                </div>
+                <div class="language-img ">
+                    <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                </div>
+            </div>
+        </nav>
+        <nav class="desktop-nav">
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div class="option-nav">
+                <div id="linear-nav">
+                    <a href="#" class="productos translate" data-translate="products">PRODUCTOS<i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                        <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                        <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                        <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    </ul>
+                </div>
+                <div class="pages">
+                    <a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a>
+                    <a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                    </div>
+                    <div class="language-img ">
+                        <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="carousel-container">
+            <div class="button-carousel">
+                <button onclick="cambiar(-1)" class="cursor"><i class="fas fa-angle-left "></i></button>
+            </div>
+            <div id="carousel">
+                <img src="./imagenes/home/foto-carousel1.jpeg" id="img-carousel" name="thumb"><br>
+            </div>
+            <div class="button-carousel">
+                <button onclick="cambiar(1)" class="cursor"><i class="fas fa-angle-right"></i></button>
+            </div>
+        </section>
+        <section id="lightbox-video">
+            <div>
+                <button id="button-lightbox" onclick="ejecutar('video','youtube')" class="cursor translate" data-translate="newCollection">Nueva coleccion</button>
+            </div>
+            <div id="video" class="lightbox" onclick="ocultar('video', 'youtube')">
+                <div class="lightbox-container">
+                    <div class="lightbox-content">
+                        <button onclick="ocultar('video', 'youtube')" class="lightbox-close cursor"><i class="fas fa-times"></i></button>
+                        <div class="video-container">
+                            <iframe id="youtube" width="960" height="540" src="https://www.youtube.com/embed/8VhACaQIswc?showinfo=0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="description">
+            <div class="description-pandora">
+                <p class="translate" data-translate="homeDescription">Un universo de historias contadas a través de charms, anillos, pendientes, pulseras y más joyas acabadas a mano.</p>
+            </div>
+        </section>
+        <section id="ad-container">
+            <div class="ad">
+                <div>
+                    <img src="./imagenes/home/collectorkit.gif" alt="Pandora Collector's Kit">
+                </div>
+                <div class="pandora-me-button">
+                    <a href="./pandoraMe.html">Pandora Me</a>
+                </div>
+            </div>
+            <div class="ad">
+                <div>
+                    <img src="./imagenes/home/pandora-me-feature.jpeg" alt="Pandora Me">
+                </div>
+                <div class="pandora-me-button">
+                    <a href="./pandoraMe.html">Pandora Me</a>
+                </div>
+            </div>
+        </section>
+
+        <a id="scrolltop" href="#top" data-scroll>
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div class="copyright">
+                <h2>Priscilla Calderón 2021</h2>
+                <h3 class="translate" data-translate="footer">Examen Cenfotec / Sitio Web Pandora</h3>
+            </div>
+            <div id="footer-actions">
+                <div class="app-button">
+                    <a href="./index.html">App</a>
+                </div>
+                <div class="social">
+                    <div class="social-media animation">
+                        <a href="http://www.facebook.com" target="blank">
+                            <i class="fab fa-facebook" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.twitter.com" target="blank">
+                            <i class="fab fa-twitter-square" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.instagram.com" target="blank">
+                            <i class="fab fa-instagram" style="color:#fff"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                    </div>
+                    <div class="language-img ">
+                        <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+</html>

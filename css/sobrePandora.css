@@ -1,0 +1,90 @@
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#sobre-pandora {
+    margin-top: 50px;
+    max-width: 810px;
+    width: 70vw;
+}
+
+#sobre-pandora img {
+    border-radius: 6px;
+    width: 100%;
+}
+
+.acordeon {
+    padding: 40px 0;
+    max-width: 810px;
+    width: 70vw;
+}
+
+.acordeon button {
+    font-size: 1.6rem;
+}
+
+.accordion {
+    background-color: var(--pink-medium);
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: 2px solid var(--white);
+    /*outline: none;*/
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: var(--black-lighter);
+    color: var(--pink-dark);
+}
+
+.panel {
+    background-color: white;
+    border: 2px solid var(--pink-medium);
+    display: none;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    max-height: 0;
+    padding: 18px;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel p {
+    margin-bottom: 10px;
+    text-align: start;
+}
+
+.img-acordeon {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.panel img {
+    width: 50%;
+}
+
+.accordion:after {
+    content: '\032C';
+    font-size: 30px;
+    color: var(--black);
+    float: right;
+    margin-left: 5px;
+}
+
+.img-acordeon .valores-img {
+    width: 80%;
+}
+
+@media all and (min-width: 640px) {
+    #sobre-pandora img {
+        max-height: 500px;
+        object-fit: cover;
+    }
+}

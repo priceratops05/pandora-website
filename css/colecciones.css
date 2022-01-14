@@ -1,0 +1,148 @@
+body {
+    padding: 62px 0 90px;
+}
+
+#sct-banner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#img-banner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+#img-banner img {
+    object-fit: cover;
+    object-position: left bottom;
+    height: 400px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+.label-radios {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.label-radios img {
+    border-radius: 5px;
+    height: 40px;
+    margin: 0 5px;
+    width: 40px;
+}
+
+#filter {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 4rem;
+    /* padding: 0 150px 50px; */
+    margin: 0 auto;
+    width: 80vw;
+}
+
+#filter-type {
+    display: flex;
+}
+
+#options-type {
+    display: flex;
+}
+
+#options-type {
+    display: flex;
+    flex-direction: column;
+}
+
+#options-type label {
+    border: 2px solid transparent;
+    cursor: pointer;
+    height: 50px;
+    margin-right: 10px;
+    padding: 5px 8px;
+}
+
+.option {
+    transition: 0.4s;
+    margin: 5px;
+}
+
+.option:hover {
+    transform: scale(1.1);
+}
+
+#options-type input:checked+label {
+    border: 2px solid var(--pink-dark);
+    border-radius: 30px;
+    min-width: 200px;
+    overflow: hidden;
+}
+
+#gallery {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.img-gallery {
+    box-shadow: 0;
+    cursor: pointer;
+    margin: 20px;
+    transition: box-shadow .3s, transform .3s;
+    width: 200px;
+}
+
+.img-gallery:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
+    transform: translateY(-4px);
+}
+
+.swal2-header h2 {
+    font-weight: 400;
+    line-height: 2.5rem;
+}
+
+.swal2-content {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+button.swal2-styled.swal2-confirm {
+    color: var(--black);
+    font-size: 1.4rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media all and (min-width: 680px) {
+    h1 {
+        font-size: 4.6rem;
+    }
+    #options-type {
+        flex-direction: row;
+    }
+    #gallery {
+        max-width: 1500px;
+    }
+    .img-gallery {
+        width: 250px;
+    }
+}

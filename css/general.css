@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    font-family: var(--tipografia-principal);
+}
+
+html {
+    font-size: 10px;
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    color: var(--black);
+    font-family: var(--tipografia-principal);
+    min-height: 100vh;
+    padding: 75px 0 90px;
+    position: relative;
+}
+
+a {
+    color: var(--black);
+    font-family: var(--tipografia-principal);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+header {
+    background: var(--pink);
+    padding-right: 30px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+nav {
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.option-nav {
+    display: flex;
+    height: 62px;
+    position: relative;
+}
+
+.pages {
+    align-items: center;
+    display: flex;
+}
+
+.pages a {
+    height: 100%;
+}
+
+.productos .fa-angle-down {
+    margin-left: 8px;
+}
+
+#menu-nav,
+#linear-nav,
+.pages a {
+    align-items: center;
+    display: flex;
+    padding: 0 20px;
+}
+
+#menu-nav:hover,
+#linear-nav:hover,
+.pages a:hover {
+    background: var(--pink-medium);
+}
+
+#menu-nav,
+#menu-nav li,
+#linear-nav,
+#linear-nav li,
+.pages a {
+    transition: all 0.4s;
+}
+
+.fa-bars {
+    color: var(--white);
+    font-size: 2.8rem;
+}
+
+#logo-nav img {
+    height: 60px;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 62px;
+    transition: all 0.5s ease;
+    visibility: hidden;
+}
+
+.dropdown li {
+    background: var(--white);
+    border-bottom: 1px solid var(--black-light);
+    border-right: 1px solid var(--black-light);
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 10px 50px 10px 10px;
+}
+
+.dropdown li:hover {
+    background: var(--pink-medium);
+    color: var(--white);
+}
+
+#menu-nav:hover .dropdown,
+#linear-nav:hover .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrolltop {
+    align-items: center;
+    background: var(--pink-medium);
+    border-radius: 20px;
+    bottom: 10px;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    transition: all .4s;
+    width: 40px;
+    z-index: 1;
+}
+
+#scrolltop:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+}
+
+#scrolltop i {
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+footer {
+    background: var(--pink);
+    bottom: 0;
+    height: 90px;
+    position: absolute;
+    width: 100%;
+}
+
+#footer-container {
+    display: flex;
+    font-family: var(--tipografia-principal);
+    justify-content: space-between;
+    padding: 20px 55px;
+}
+
+#footer-actions {
+    align-items: center;
+    display: flex;
+}
+
+.app-button {
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 6px;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    margin-right: 5px;
+    padding: 5px 10px;
+    transition: all .4s;
+}
+
+.app-button a {
+    color: inherit;
+    font-size: 1.4rem;
+}
+
+.app-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1.4rem;
+    transform: scale(1.1);
+}
+
+.social {
+    display: flex;
+    margin-right: 20px;
+}
+
+.social-media {
+    margin-left: 10px;
+}
+
+div.animation:hover i {
+    transition: all 1s ease-in-out;
+    transform: rotate(360deg);
+}
+
+.social-media i {
+    font-size: 2.4rem;
+}
+
+.copyright h2,
+.copyright h3 {
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+.copyright h2 {
+    margin-bottom: 8px;
+}
+
+#language-container {
+    display: flex;
+    cursor: pointer;
+}
+
+.language-img {
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+}
+
+.language-img img {
+    display: flex;
+    object-fit: cover;
+    width: 25px;
+}
+
+.active {
+    border: 1px solid var(--white);
+}
+
+@media all and (min-width: 700px) {
+    .mobile-nav {
+        display: none;
+    }
+    #logo-nav {
+        margin-left: 30px;
+    }
+    .desktop-nav {
+        align-items: center;
+        display: flex;
+        font-size: 1.3rem;
+    }
+}

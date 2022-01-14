@@ -1,0 +1,13 @@
+:root {
+    --black: #555;
+    --black-light: #ddd;
+    --black-lighter: #f8f8f8;
+    --pink-light: #F6EBE3;
+    --pink: #ffc0cc;
+    --pink-medium: #f1b0bc;
+    --pink-dark: #c28994;
+    --red: #E84B37;
+    --yellow: #FFF5CC;
+    --white: #fff;
+    --tipografia-principal: 'Poppins', sans-serif;
+}

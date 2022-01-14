@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora</title>
+    <link rel="icon" href="./imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/sobrePandora.css">
+    <script src="https://kit.fontawesome.com/4a30f6fcf9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/scrollTop.js" defer></script>
+    <script src="./js/translations.js" defer></script>
+    <script src="./js/sobrePandora.js" defer></script>
+</head>
+
+<body id="top">
+    <header>
+        <nav class="mobile-nav">
+            <div id="menu-nav">
+                <i class="fas fa-bars"></i>
+                <ul class="dropdown">
+                    <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                    <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                    <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                    <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    <li><a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a></li>
+                    <li><a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a></li>
+                </ul>
+            </div>
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div id="language-container">
+                <div class="language-img">
+                    <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                </div>
+                <div class="language-img ">
+                    <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                </div>
+            </div>
+        </nav>
+        <nav class="desktop-nav">
+            <div id="logo-nav">
+                <a href="./home.html"><img src="./imagenes/pandora-logo.png" alt="logo-pandora"></a>
+            </div>
+            <div class="option-nav">
+                <div id="linear-nav">
+                    <a href="#" class="productos translate" data-translate="products">PRODUCTOS<i class="fas fa-angle-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="./charmsPulseras.html" class="translate" data-translate="charmsBracelets">CHARMS Y PULSERAS</a></li>
+                        <li><a href="./descuentos.html" class="translate" data-translate="sale">DESCUENTOS</a></li>
+                        <li><a href="./colecciones.html" class="translate" data-translate="collections">COLECCIONES</a></li>
+                        <li><a href="./pandoraMe.html">PANDORA ME</a></li>
+                    </ul>
+                </div>
+                <div class="pages">
+                    <a href="./sobrePandora.html" class="translate" data-translate="aboutPandora">SOBRE PANDORA</a>
+                    <a href="./contactenos.html" class="translate" data-translate="contactUs">CONTACTENOS</a>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                    </div>
+                    <div class="language-img ">
+                        <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+            <div id="sobre-pandora">
+                <h1 class="translate" data-translate="aboutPandora">SOBRE PANDORA</h1>
+                <img src="./imagenes/sobrePandora/sobrePandora.jpeg" alt="productos pandora">
+            </div>
+            <div class="acordeon">
+                <button class="accordion translate" data-translate="history">Historia</button>
+                <div class="panel">
+                    <div class="img-acordeon">
+                        <img src="./imagenes/sobrePandora/historiaPandora.jpeg" alt="logo">
+                    </div>
+                    <p class="translate" data-translate="historyDescription">Nuestro viaje comienza en 1982, en Copenhague, Dinamarca, con el orfebre danés Per Enevoldsen y su esposa Winnie, que fundaron Pandora. Pandora comenzó como una joyería danesa local y pasó a ser la marca de joyería más grande del mundo,
+                        que busca que las personas de todo el mundo cuenten su propia historia a través nuestros productos.</p>
+                </div>
+                <button class="accordion translate" data-translate="values">Valores</button>
+                <div class="panel">
+                    <div class="img-acordeon">
+                        <img src="./imagenes/sobrePandora/valores.png" alt="logo" class="valores-img">
+                    </div>
+                    <strong class="translate" data-translate="valueAwareness">Cuida el planeta</strong>
+                    <p class="translate" data-translate="awarenessDescription">Comprometidos con el medio ambiente y decididos a reducir nuestra huella ecológica, deseamos ser una empresa carbono neutral para el 2025.</p>
+                    <div class="img-acordeon">
+                        <img src="./imagenes/sobrePandora/estilo.jpeg" alt="logo" class="valores-img">
+                    </div>
+                    <strong class="translate" data-translate="valueStyle">Expresa tu estilo</strong>
+                    <p class="translate" data-translate="styleDescription">Pandora ama que puedas expresar quién eres a través de tu estilo; con las piezas Pandora podrás reflejarlo, llevando aquellas que te recuerden todo lo que eres y todo lo que amas.</p>
+                    <div class="img-acordeon">
+                        <img src="./imagenes/sobrePandora/calidad.jpeg" alt="logo" class="valores-img">
+                    </div>
+                    <strong class="translate" data-translate="valueQuality">Calidad consciente</strong>
+                    <p class="translate" data-translate="qualityDescription">Nos esforzamos para darte los mejores materiales para cada diseño de joyería, siendo siempre conscientes de la protección de nuestro planeta.</p>
+                </div>
+                <button class="accordion">Charms</button>
+                <div class="panel">
+                    <div class="img-acordeon">
+                        <img src="./imagenes/sobrePandora/charm.jpeg" alt="logo">
+                    </div>
+                    <strong>Charms</strong>
+                    <p class="translate" data-translate="charmsDescription">Pandora comenzó a diseñar sus charms en el año 2000. Cada charm tiene un significado, a veces muchos significados, uno el que le da su diseñador y otros mucho significados que le concede la persona que lo lleva y lo cuida. Nuestros
+                        charms se llevan en nuestras pulseras y collares Pandora, creados especialmente para que cada persona cree su propio look y los lleve de una manera única. </p>
+                    <div class="img-acordeon">
+                        <img src="./imagenes/sobrePandora/cuidados.jpeg" alt="logo">
+                    </div>
+                    <strong class="translate" data-translate="jeweleryCare">Cuidados</strong>
+                    <p class="translate" data-translate="jeweleryCareDescription">Frota frecuentemente las joyas con un paño de pulido suave para mantener su brillo. Te recomendamos utilizar nuestro kit de cuidado Pandora aprobado para mantener perfectas tus joyas.</p>
+                </div>
+            </div>
+
+        </section>
+        <a id="scrolltop" href="#top" data-scroll>
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div class="copyright">
+                <h2>Priscilla Calderón 2021</h2>
+                <h3 class="translate" data-translate="footer">Examen Cenfotec / Sitio Web Pandora</h3>
+            </div>
+            <div id="footer-actions">
+                <div class="app-button">
+                    <a href="./index.html">App</a>
+                </div>
+                <div class="social">
+                    <div class="social-media animation">
+                        <a href="http://www.facebook.com" target="blank">
+                            <i class="fab fa-facebook" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.twitter.com" target="blank">
+                            <i class="fab fa-twitter-square" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.instagram.com" target="blank">
+                            <i class="fab fa-instagram" style="color:#fff"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src=" ./imagenes/spanish.png " alt="Español "></a>
+                    </div>
+                    <div class="language-img ">
+                        <a language='english' class="language " onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png " alt="Ingles "></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+</html>

@@ -1,0 +1,219 @@
+#carousel-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#carousel {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    width: 80%;
+}
+
+#carousel img {
+    object-fit: cover;
+    height: 40vw;
+    width: 100%;
+}
+
+.button-carousel button {
+    background: var(--pink-medium);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    font-size: 2rem;
+    height: 40px;
+    margin: 0 20px;
+    transition: all .4s;
+    width: 40px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+#lightbox-video {
+    display: flex;
+    justify-content: center;
+}
+
+#button-lightbox {
+    background: var(--pink-medium);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+
+#button-lightbox:hover,
+.button-carousel button:hover,
+.pandora-me-button:hover {
+    transform: scale(1.1);
+}
+
+.lightbox {
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: scroll;
+    position: fixed;
+    display: none;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.lightbox-container {
+    position: relative;
+    max-width: 960px;
+    margin: 10% auto;
+    padding: 0 3%;
+    height: auto;
+    z-index: 10;
+}
+
+.lightbox-content {
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-close {
+    background-color: var(--pink);
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    height: 40px;
+    max-width: 960px;
+    position: absolute;
+    right: 4%;
+    text-transform: uppercase;
+    top: -50px;
+    transition: all .4s;
+    width: 40px;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
+
+#description {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
+.description-pandora {
+    text-align: center;
+    width: 40%;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+#ad-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ad {
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 75px;
+    width: 70%;
+}
+
+.ad img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.pandora-me-button {
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 245, 204, 1) 0%, rgba(255, 192, 204, 1) 100%);
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    position: absolute;
+    top: -40px;
+    left: -15px;
+    text-align: center;
+    transition: all .4s;
+    width: 70px;
+}
+
+.pandora-me-button a {
+    color: var(--black);
+    font-family: var(--tipografia-principal);
+    font-size: 1.4rem;
+    transition: all .4s;
+}
+
+.pandora-me-button:hover a {
+    color: var(--pink-dark);
+}
+
+@media (max-width: 575px) {
+    .lightbox-container {
+        margin-top: 150px !important;
+    }
+}
+
+.video-container {
+    padding-bottom: 56.25%;
+    position: relative;
+    padding-top: 30px;
+    overflow: hidden;
+    height: 0;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+@media all and (min-width: 640px) {
+    .button-carousel button {
+        height: 60px;
+        width: 60px;
+    }
+    .video-container {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+    #ad-container {
+        flex-direction: row;
+    }
+    .ad {
+        margin: 50px;
+        width: 40%;
+    }
+    .pandora-me-button {
+        height: 100px;
+        line-height: 2rem;
+        padding: 5px;
+        width: 100px;
+    }
+    .pandora-me-button a {
+        font-size: 1.6rem;
+    }
+}

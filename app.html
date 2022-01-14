@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora</title>
+    <link rel="icon" href="./imagenes/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="https://kit.fontawesome.com/4a30f6fcf9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/scrollTop.js" defer></script>
+    <script src="./js/translations.js" defer></script>
+    <script src="./js/app.js" defer></script>
+</head>
+
+
+<body id="top">
+    <header id="header">
+        <nav>
+            <div id="logo-nav">
+                <a href="./index.html"><img src="./imagenes/contactenos/logoPandora.png" alt="logo-pandora"></a>
+            </div>
+            <div id="language-container">
+                <div class="language-img">
+                    <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src="./imagenes/spanish.png" alt="Español"></a>
+                </div>
+                <div class="language-img">
+                    <a language='english' class="language" onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <div id="img-banner">
+                <img src="./imagenes/pandora-logo-negro.png" alt="">
+            </div>
+        </section>
+        <section id="sct-products">
+            <div id="products">
+                <div class="product">
+                    <input type="radio" id="snitch" name="products" class="accessory" value="1" hidden checked onchange="findSelectedProduct()">
+                    <label for="snitch"><img src="./imagenes/colecciones/colecciones2.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="star-wars-brac" name="products" class="accessory" value="2" hidden onchange="findSelectedProduct()">
+                    <label for="star-wars-brac"><img src="./imagenes/colecciones/colecciones16.png " alt=" "></label>
+                </div>
+                <div class="product ">
+                    <input type="radio" id="minnie" name="products" class="accessory" value="3 " hidden onchange="findSelectedProduct()">
+                    <label for="minnie"><img src="./imagenes/colecciones/colecciones18.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="neck-pandora-me" name="products" class="accessory" value="4" hidden onchange="findSelectedProduct()">
+                    <label for="neck-pandora-me"><img src="./imagenes/pandoraMe/pandoraMe1.jpeg" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="logo-corona" name="products" class="accessory" value="5" hidden onchange="findSelectedProduct()">
+                    <label for="logo-corona"><img src="./imagenes/charmsPulseras/charmsPulseras5.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="bracelet" name="products" class="accessory" value="6" hidden onchange="findSelectedProduct()">
+                    <label for="bracelet"><img src="./imagenes/charmsPulseras/charmsPulseras23.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="tree" name="products" class="accessory" value="7" hidden onchange="findSelectedProduct()">
+                    <label for="tree"><img src="./imagenes/charmsPulseras/charmsPulseras11.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="chain-charm" name="products" class="accessory" value="8" hidden onchange="findSelectedProduct()">
+                    <label for="chain-charm"><img src="./imagenes/charmsPulseras/charmsPulseras8.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="deathly-hallows" name="products" class="accessory" value="9" hidden onchange="findSelectedProduct()">
+                    <label for="deathly-hallows"><img src="./imagenes/colecciones/colecciones6.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="chewbacca" name="products" class="accessory" value="10" hidden onchange="findSelectedProduct()">
+                    <label for="chewbacca"><img src="./imagenes/colecciones/colecciones10.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="up" name="products" class="accessory" value="11" hidden onchange="findSelectedProduct()">
+                    <label for="up"><img src="./imagenes/colecciones/colecciones17.png" alt=""></label>
+                </div>
+                <div class="product">
+                    <input type="radio" id="pandoa-me-brac" name="products" class="accessory" value="12" hidden onchange="findSelectedProduct()">
+                    <label for="pandoa-me-brac"><img src="./imagenes/pandoraMe/pandoraMe4.jpeg" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section id="form">
+
+            <div class="form-element">
+                <label for="cantidad" class="translate" data-translate="amount">Cantidad:</label>
+                <input type="number" id="cantidad" placeholder="0">
+            </div>
+            <div>
+                <button id="registrarBtn" class="button translate" data-translate="add"><i class="fas fa-plus"></i>Agregar</button>
+            </div>
+        </section>
+        <section>
+            <div id="results">
+                <button id="total" class="button"><i class="fas fa-coins"></i>Total</button>
+                <button id="masPopular" class="button translate" data-translate="popular">Más popular</button>
+                <button id="precioBtn" class="button translate" data-translate="price">Consultar precio</button>
+                <button id="restablecerBtn" class="button translate" data-translate="resetAccessory">Restablecer</button>
+                <button onclick="location.reload()" class="button translate" data-translate="resetTable">Iniciar</button>
+            </div>
+        </section>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th class="translate" data-translate="accessoryTitle">ACCESORIO</th>
+                        <th class="translate" data-translate="colectionTitle">COLECCION</th>
+                        <th>METAL</th>
+                        <th class="translate" data-translate="typeTitle">TIPO</th>
+                        <th class="translate" data-translate="amountTitle">CANTIDAD</th>
+                        <th>TOTAL</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="table"></tbody>
+            </table>
+        </section>
+        <a id="scrolltop" href="#top" data-scroll>
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div class="copyright">
+                <h2>Priscilla Calderón 2021</h2>
+                <h3 class="translate" data-translate="footer">Examen Cenfotec / App Pandora</h3>
+            </div>
+            <div id="footer-actions">
+                <div class="social">
+                    <div class="social-media animation">
+                        <a href="http://www.facebook.com" target="blank">
+                            <i class="fab fa-facebook" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.twitter.com" target="blank">
+                            <i class="fab fa-twitter-square" style="color:#fff"></i>
+                        </a>
+                    </div>
+                    <div class="social-media animation">
+                        <a href="http://www.instagram.com" target="blank">
+                            <i class="fab fa-instagram" style="color:#fff"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="language-container">
+                    <div class="language-img">
+                        <a language='spanish' class="active language" onclick="changeLanguageEvent(event)"><img src="./imagenes/spanish.png" alt="Español"></a>
+                    </div>
+                    <div class="language-img">
+                        <a language='english' class="language" onclick="changeLanguageEvent(event)"><img src="./imagenes/english.png" alt="Ingles"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
