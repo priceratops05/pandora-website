@@ -199,7 +199,7 @@ const changeLanguage = {
         select: 'Select a reason',
         changes: 'Returns & exchanges',
         warranty: 'Warranty',
-        cares: 'Jewelery cares',
+        cares: 'Jewelry cares',
         status: 'Status of your order',
         other: 'Other',
         message: 'Message',
